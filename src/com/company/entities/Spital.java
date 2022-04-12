@@ -4,14 +4,7 @@ public class Spital {
     private int id;
     private String nume;
     private String adresa;
-
-    public void setTriaj(Triaj triaj) {
-        this.triaj = triaj;
-    }
-
-    public Triaj getTriaj() {
-        return triaj;
-    }
+    private Triaj triaj;
 
     public Spital(int id, String nume, String adresa, Triaj triaj) {
         this.id = id;
@@ -20,8 +13,9 @@ public class Spital {
         this.triaj = triaj;
     }
 
-    private Triaj triaj;
-
+    public void setTriaj(Triaj triaj) {
+        this.triaj = triaj;
+    }
     public void setId(int id) {
         this.id = id;
     }
@@ -33,6 +27,11 @@ public class Spital {
     public void setAdresa(String adresa) {
         this.adresa = adresa;
     }
+    public Triaj getTriaj() {
+        return triaj;
+    }
+
+
 
     public int getId() {
         return id;

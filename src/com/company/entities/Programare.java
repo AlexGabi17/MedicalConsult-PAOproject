@@ -4,20 +4,16 @@ public class Programare {
     private int ora;
     private int zi;
     private Doctor doctor; //doctorul la care e facuta programarea
-
-    public Doctor getDoctor() {
-        return doctor;
-    }
-
-    public void setDoctor(Doctor doctor) {
-        this.doctor = doctor;
-    }
-
+    private int luna;
     public Programare(int ora, int zi, int luna,  Doctor doctor) {
         this.ora = ora;
         this.zi = zi;
         this.doctor = doctor;
         this.luna = luna;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
     }
 
     public void setOra(int ora) {
@@ -32,6 +28,11 @@ public class Programare {
         this.luna = luna;
     }
 
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+
     public int getOra() {
         return ora;
     }
@@ -44,7 +45,4 @@ public class Programare {
         return luna;
     }
 
-
-
-    private int luna;
 }

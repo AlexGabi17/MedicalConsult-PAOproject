@@ -6,6 +6,13 @@ public class Asigurare {
     private String numeCasaSanatate;
     private String dataExpirare;
 
+    public Asigurare(int id, String tipAsigurare, String numeCasaSanatate, String dataExpirare) {
+        this.id = id;
+        this.tipAsigurare = tipAsigurare;
+        this.numeCasaSanatate = numeCasaSanatate;
+        this.dataExpirare = dataExpirare;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -38,11 +45,5 @@ public class Asigurare {
         return dataExpirare;
     }
 
-    public Asigurare(int id, String tipAsigurare, String numeCasaSanatate, String dataExpirare) {
-        this.id = id;
-        this.tipAsigurare = tipAsigurare;
-        this.numeCasaSanatate = numeCasaSanatate;
-        this.dataExpirare = dataExpirare;
-    }
 
 }

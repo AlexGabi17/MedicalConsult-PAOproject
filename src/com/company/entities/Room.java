@@ -1,6 +1,12 @@
 package com.company.entities;
 
 public class Room {
+    private int number;
+
+    public Room(int number) {
+        this.number = number;
+    }
+
     public void setNumber(int number) {
         this.number = number;
     }
@@ -9,9 +15,4 @@ public class Room {
         return number;
     }
 
-    public Room(int number) {
-        this.number = number;
-    }
-
-    private int number;
 }

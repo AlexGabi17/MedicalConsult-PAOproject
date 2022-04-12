@@ -13,9 +13,7 @@ public class Doctor {
         this.cabinet = cabinet;
     }
 
-    public String getNume() {
-        return nume;
-    }
+
 
     public void setNume(String nume) {
         this.nume = nume;
@@ -35,6 +33,9 @@ public class Doctor {
 
     public int getId() {
         return id;
+    }
+    public String getNume() {
+        return nume;
     }
 
     public Spital getSpital() {

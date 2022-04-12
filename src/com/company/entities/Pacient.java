@@ -3,16 +3,9 @@ package com.company.entities;
 public class Pacient {
     private int id;
     private String nume;
-
+    private Programare[] programari;
+    private Asigurare asigurare;
     private Diagnostic diagnostic;
-
-    public void setProgramari(Programare[] programari) {
-        this.programari = programari;
-    }
-
-    public Programare[] getProgramari() {
-        return programari;
-    }
 
     public Pacient(int id, String nume, Diagnostic diagnostic, Programare[] programari, Asigurare asigurare) {
         this.id = id;
@@ -20,17 +13,6 @@ public class Pacient {
         this.diagnostic = diagnostic;
         this.programari = programari;
         this.asigurare = asigurare;
-    }
-
-    private Programare[] programari;
-    private Asigurare asigurare;
-
-
-
-
-
-    public String getNume() {
-        return nume;
     }
 
     public void setNume(String nume) {
@@ -49,6 +31,19 @@ public class Pacient {
     public void setDiagnostic(Diagnostic diagnostic) {
         this.diagnostic = diagnostic;
     }
+
+    public void setProgramari(Programare[] programari) {
+        this.programari = programari;
+    }
+
+    public Programare[] getProgramari() {
+        return programari;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
 
     public int getId() {
         return id;

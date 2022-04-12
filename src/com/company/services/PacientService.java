@@ -1,11 +1,10 @@
 package com.company.services;
 
-import com.company.entities.Pacient;
-import com.company.interfaces.PacientInterface;
+import com.company.interfaces.Pacient;
 
-public class PacientService implements PacientInterface {
+public class PacientService implements Pacient {
     @Override
-    public String showPacientInfo(Pacient obj) {
+    public String showPacientInfo(com.company.entities.Pacient obj) {
         String result = new String();
         result = "Pacientul " + obj.getNume() + " cu id-ul " + obj.getId() + " are diagnosticul " + obj.getDiagnostic().getDiagnostic();
 
@@ -14,12 +13,12 @@ public class PacientService implements PacientInterface {
 
 
     @Override
-    public String tipAsigurare(Pacient obj) {
+    public String tipAsigurare(com.company.entities.Pacient obj) {
         return obj.getAsigurare().getTipAsigurare();
     }
 
     @Override
-    public Boolean verificaFonduri(Pacient obj) {
+    public Boolean verificaFonduri(com.company.entities.Pacient obj) {
         String tipAsigurare = obj.getAsigurare().getTipAsigurare();
 
         if(tipAsigurare == "stat")
@@ -32,12 +31,12 @@ public class PacientService implements PacientInterface {
     }
 
     @Override
-    public int urgenta(Pacient obj) {
+    public int urgenta(com.company.entities.Pacient obj) {
         return obj.getDiagnostic().getUrgenta();
     }
 
     @Override
-    public String showProgramari(Pacient obj) {
+    public String showProgramari(com.company.entities.Pacient obj) {
         String result = new String();
         result = "";
         int index = 0;

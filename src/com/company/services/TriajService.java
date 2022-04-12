@@ -1,12 +1,11 @@
 package com.company.services;
 
-import com.company.entities.Triaj;
-import com.company.interfaces.TriajInterface;
+import com.company.interfaces.Triaj;
 
-public class TriajService implements TriajInterface {
+public class TriajService implements Triaj {
 
     @Override
-    public String getSefTriaj(Triaj obj) {
+    public String getSefTriaj(com.company.entities.Triaj obj) {
         return obj.getSefTriaj();
     }
 }

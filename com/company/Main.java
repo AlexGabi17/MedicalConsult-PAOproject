@@ -1,7 +1,7 @@
 package com.company;
 
-import entities.*;
-import services.*;
+import com.company.entities.*;
+import com.company.services.*;
 
 
 import java.util.HashSet;

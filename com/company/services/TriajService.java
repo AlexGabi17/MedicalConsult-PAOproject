@@ -1,7 +1,7 @@
-package services;
+package com.company.services;
 
-import entities.Triaj;
-import interfaces.TriajInterface;
+import com.company.entities.Triaj;
+import com.company.interfaces.TriajInterface;
 
 public class TriajService implements TriajInterface {
 

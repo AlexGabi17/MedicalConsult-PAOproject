@@ -1,9 +1,9 @@
-package services;
+package com.company.services;
 
-import entities.Cabinet;
-import entities.Doctor;
-import entities.Spital;
-import interfaces.DoctorInterface;
+import com.company.entities.Cabinet;
+import com.company.entities.Doctor;
+import com.company.entities.Spital;
+import com.company.interfaces.DoctorInterface;
 
 public class DoctorService implements DoctorInterface {
     @Override

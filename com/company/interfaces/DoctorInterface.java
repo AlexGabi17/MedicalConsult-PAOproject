@@ -1,8 +1,8 @@
-package interfaces;
+package com.company.interfaces;
 
-import entities.Cabinet;
-import entities.Doctor;
-import entities.Spital;
+import com.company.entities.Cabinet;
+import com.company.entities.Doctor;
+import com.company.entities.Spital;
 
 
 public interface DoctorInterface {

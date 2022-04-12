@@ -1,7 +1,7 @@
-package services;
+package com.company.services;
 
-import entities.Room;
-import interfaces.RoomInterface;
+import com.company.entities.Room;
+import com.company.interfaces.RoomInterface;
 
 public class RoomService implements RoomInterface {
     @Override

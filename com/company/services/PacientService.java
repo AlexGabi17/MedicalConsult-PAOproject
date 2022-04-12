@@ -1,7 +1,7 @@
-package services;
+package com.company.services;
 
-import entities.Pacient;
-import interfaces.PacientInterface;
+import com.company.entities.Pacient;
+import com.company.interfaces.PacientInterface;
 
 public class PacientService implements PacientInterface {
     @Override

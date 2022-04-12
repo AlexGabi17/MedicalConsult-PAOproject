@@ -1,6 +1,6 @@
-package interfaces;
+package com.company.interfaces;
 
-import entities.Triaj;
+import com.company.entities.Triaj;
 
 public interface TriajInterface {
     public String getSefTriaj(Triaj obj);

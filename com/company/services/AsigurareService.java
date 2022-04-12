@@ -1,7 +1,7 @@
-package services;
+package com.company.services;
 
-import entities.Asigurare;
-import interfaces.AsigurareInterface;
+import com.company.entities.Asigurare;
+import com.company.interfaces.AsigurareInterface;
 
 public class AsigurareService implements AsigurareInterface {
     @Override

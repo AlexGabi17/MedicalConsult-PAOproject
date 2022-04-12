@@ -1,4 +1,4 @@
-package entities;
+package com.company.entities;
 
 public class Room {
     public void setNumber(int number) {

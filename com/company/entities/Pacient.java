@@ -1,4 +1,4 @@
-package entities;
+package com.company.entities;
 
 public class Pacient {
     private int id;

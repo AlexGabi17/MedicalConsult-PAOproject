@@ -1,4 +1,4 @@
-package entities;
+package com.company.entities;
 
 public class Diagnostic {
     public void setUrgenta(int urgenta) {

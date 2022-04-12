@@ -1,6 +1,6 @@
-package interfaces;
+package com.company.interfaces;
 
-import entities.Asigurare;
+import com.company.entities.Asigurare;
 
 public interface AsigurareInterface {
     public int getId(Asigurare obj);

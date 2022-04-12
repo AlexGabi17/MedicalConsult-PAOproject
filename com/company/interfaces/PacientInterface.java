@@ -1,6 +1,6 @@
-package interfaces;
+package com.company.interfaces;
 
-import entities.Pacient;
+import com.company.entities.Pacient;
 
 public interface PacientInterface {
     public String showPacientInfo(Pacient obj);

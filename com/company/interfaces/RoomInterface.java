@@ -1,6 +1,6 @@
-package interfaces;
+package com.company.interfaces;
 
-import entities.Room;
+import com.company.entities.Room;
 
 public interface RoomInterface {
     public int getNumber(Room obj);

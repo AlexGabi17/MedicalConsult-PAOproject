@@ -1,6 +1,8 @@
 package com.company.entities;
 
-public class Diagnostic {
+import java.io.Serializable;
+
+public class Diagnostic implements Serializable{
     private int urgenta; //pacientii care au nevoie de atentie imediata, atributului "urgenta" ii va fi alocat o valoare mai mare
     private String diagnostic;
 

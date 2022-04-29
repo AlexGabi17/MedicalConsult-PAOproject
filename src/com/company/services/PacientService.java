@@ -3,6 +3,15 @@ package com.company.services;
 import com.company.interfaces.Pacient;
 
 public class PacientService implements Pacient {
+    private static PacientService single_instance = null;
+
+    public static PacientService getInstance()
+    {
+        if (single_instance == null) {
+            single_instance = new PacientService();
+        }
+        return single_instance;
+    }
     @Override
     public String showPacientInfo(com.company.entities.Pacient obj) {
         String result = new String();

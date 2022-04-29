@@ -1,62 +1,54 @@
 package com.company.services;
 
-import com.company.entities.Cabinet;
-import com.company.interfaces.Triaj;
+import com.company.entities.Diagnostic;
+import com.company.interfaces.Cabinet;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TriajService implements Triaj, Serializable {
+public class CabinetService implements com.company.interfaces.Cabinet, Serializable {
+    private static CabinetService single_instance = null;
 
-    private static TriajService single_instance = null;
-
-    public static TriajService getInstance()
+    public static CabinetService getInstance()
     {
-        if (single_instance == null) {
-            single_instance = new TriajService();
-        }
+        if (single_instance == null)
+            single_instance = new CabinetService();
+
         return single_instance;
+    }
+
+    @Override
+    public String toString(com.company.entities.Cabinet cabinet) {
+        return "Cabinet{" +
+                "number='" + cabinet.getNumber() + "\'" +
+                "hasBed='" + cabinet.getHasBed() +
+                "'}";
     }
 
     private static final String CSV_SEPARATOR = ",";
 
 
     @Override
-    public String getSefTriaj(com.company.entities.Triaj obj) {
-        return obj.getSefTriaj();
-    }
-
-
-
-    @Override
-    public String toString(com.company.entities.Triaj triaj) {
-        return "Triaj{" +
-                "number='" + triaj.getNumber() + "\'" +
-                "hasBed='" + triaj.getSefTriaj() +
-                "'}";
-    }
-
-    @Override
-    public void writeTriaj(ArrayList<com.company.entities.Triaj> productList) {
+    public void writeCabinete(ArrayList<com.company.entities.Cabinet> productList) {
         try {
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("triaj.csv", true), "UTF-8"));
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("cabinete.csv", true), "UTF-8"));
             //verify if header exist
-            BufferedReader br = new BufferedReader(new FileReader("triaj.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("cabinete.csv"));
             if (br.readLine() == null)
             {
                 StringBuffer headers = new StringBuffer();
-                headers.append("number,sefTriaj");
+                headers.append("number,hasBed");
                 bw.write(headers.toString());
                 bw.newLine();
             }
             //
-            for (com.company.entities.Triaj triaj: productList)
+            for (com.company.entities.Cabinet cabinet: productList)
             {
                 StringBuffer oneLine = new StringBuffer();
-                oneLine.append(triaj.getNumber());
+                oneLine.append(cabinet.getNumber());
                 oneLine.append(CSV_SEPARATOR);
-                oneLine.append(triaj.getNumber());
+                oneLine.append(cabinet.getHasBed());
                 bw.write(oneLine.toString());
                 bw.newLine();
             }
@@ -68,16 +60,17 @@ public class TriajService implements Triaj, Serializable {
         catch (IOException e){}
     }
 
+
     @Override
-    public void readTriaj() {
+    public void readCabinete() {
         BufferedReader br = null;
         try
         {
             //Reading the csv file
-            br = new BufferedReader(new FileReader("triaj.csv"));
+            br = new BufferedReader(new FileReader("cabinete.csv"));
 
             //Create List for holding Employee objects
-            List<com.company.entities.Triaj> empList = new ArrayList<com.company.entities.Triaj>();
+            List<com.company.entities.Cabinet> empList = new ArrayList<com.company.entities.Cabinet>();
 
             String line = "";
             //Read to skip the header
@@ -88,16 +81,16 @@ public class TriajService implements Triaj, Serializable {
 
                 if (data.length > 0) {
                     //Save the employee details in Employee object
-                    com.company.entities.Triaj obj = new com.company.entities.Triaj(Integer.parseInt(data[0]),
-                            data[1]
+                    com.company.entities.Cabinet obj = new com.company.entities.Cabinet(Integer.parseInt(data[0]),
+                            Boolean.parseBoolean(data[1])
                     );
                     empList.add(obj);
                 }
             }
             //Lets print the Employee List
-            for(com.company.entities.Triaj e : empList)
+            for(com.company.entities.Cabinet e : empList)
             {
-                System.out.println(e.getNumber()+"   "+e.getSefTriaj());
+                System.out.println(e.getNumber()+"   "+e.getHasBed());
             }
         }
         catch(Exception ee)

@@ -5,6 +5,17 @@ import com.company.entities.Spital;
 import com.company.interfaces.Doctor;
 
 public class DoctorService implements Doctor {
+
+    private static DoctorService single_instance = null;
+
+    public static DoctorService getInstance()
+    {
+        if (single_instance == null) {
+            single_instance = new DoctorService();
+        }
+        return single_instance;
+    }
+
     @Override
     public void changeName(com.company.entities.Doctor obj, String nume) {
         obj.setNume(nume);

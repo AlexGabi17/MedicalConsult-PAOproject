@@ -1,62 +1,55 @@
 package com.company.services;
 
-import com.company.entities.Cabinet;
-import com.company.interfaces.Triaj;
+import com.company.interfaces.Diagnostic;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TriajService implements Triaj, Serializable {
+public class DiagnosticService implements Diagnostic, Serializable {
 
-    private static TriajService single_instance = null;
+    private static DiagnosticService single_instance = null;
 
-    public static TriajService getInstance()
+    public static DiagnosticService getInstance()
     {
-        if (single_instance == null) {
-            single_instance = new TriajService();
-        }
+        if (single_instance == null)
+            single_instance = new DiagnosticService();
+
         return single_instance;
     }
 
+    @Override
+    public String toString(com.company.entities.Diagnostic diagnostic){
+        return "Diagnostic{" +
+                "urgenta='" + diagnostic.getUrgenta() + '\''+
+                ",  diagnostic='" + diagnostic.getDiagnostic() +
+                '}';
+    }
+
+
+
     private static final String CSV_SEPARATOR = ",";
-
-
     @Override
-    public String getSefTriaj(com.company.entities.Triaj obj) {
-        return obj.getSefTriaj();
-    }
-
-
-
-    @Override
-    public String toString(com.company.entities.Triaj triaj) {
-        return "Triaj{" +
-                "number='" + triaj.getNumber() + "\'" +
-                "hasBed='" + triaj.getSefTriaj() +
-                "'}";
-    }
-
-    @Override
-    public void writeTriaj(ArrayList<com.company.entities.Triaj> productList) {
+    public void writeDiagnostic(ArrayList<com.company.entities.Diagnostic> productList)
+    {
         try {
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("triaj.csv", true), "UTF-8"));
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("diagnostice.csv", true), "UTF-8"));
             //verify if header exist
-            BufferedReader br = new BufferedReader(new FileReader("triaj.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("diagnostice.csv"));
             if (br.readLine() == null)
             {
                 StringBuffer headers = new StringBuffer();
-                headers.append("number,sefTriaj");
+                headers.append("urgenta,diagnostic");
                 bw.write(headers.toString());
                 bw.newLine();
             }
             //
-            for (com.company.entities.Triaj triaj: productList)
+            for (com.company.entities.Diagnostic diagnostic : productList)
             {
                 StringBuffer oneLine = new StringBuffer();
-                oneLine.append(triaj.getNumber());
+                oneLine.append(diagnostic.getUrgenta());
                 oneLine.append(CSV_SEPARATOR);
-                oneLine.append(triaj.getNumber());
+                oneLine.append(diagnostic.getDiagnostic());
                 bw.write(oneLine.toString());
                 bw.newLine();
             }
@@ -67,17 +60,20 @@ public class TriajService implements Triaj, Serializable {
         catch (FileNotFoundException e){}
         catch (IOException e){}
     }
-
     @Override
-    public void readTriaj() {
+    public void readDiagnostic()
+    {
+        //Delimiters used in the CSV file
+
+
         BufferedReader br = null;
         try
         {
             //Reading the csv file
-            br = new BufferedReader(new FileReader("triaj.csv"));
+            br = new BufferedReader(new FileReader("diagnostice.csv"));
 
             //Create List for holding Employee objects
-            List<com.company.entities.Triaj> empList = new ArrayList<com.company.entities.Triaj>();
+            List<com.company.entities.Diagnostic> empList = new ArrayList<com.company.entities.Diagnostic>();
 
             String line = "";
             //Read to skip the header
@@ -88,16 +84,15 @@ public class TriajService implements Triaj, Serializable {
 
                 if (data.length > 0) {
                     //Save the employee details in Employee object
-                    com.company.entities.Triaj obj = new com.company.entities.Triaj(Integer.parseInt(data[0]),
-                            data[1]
-                    );
+                    com.company.entities.Diagnostic obj = new com.company.entities.Diagnostic(Integer.parseInt(data[0]),
+                            data[1]);
                     empList.add(obj);
                 }
             }
             //Lets print the Employee List
-            for(com.company.entities.Triaj e : empList)
+            for(com.company.entities.Diagnostic e : empList)
             {
-                System.out.println(e.getNumber()+"   "+e.getSefTriaj());
+                System.out.println(e.getUrgenta()+"   "+e.getDiagnostic());
             }
         }
         catch(Exception ee)
@@ -113,4 +108,5 @@ public class TriajService implements Triaj, Serializable {
             }
         }
     }
+
 }

@@ -62,7 +62,7 @@ public class CabinetService implements com.company.interfaces.Cabinet, Serializa
 
 
     @Override
-    public void readCabinete() {
+    public ArrayList<com.company.entities.Cabinet>  readCabinete() {
         BufferedReader br = null;
         try
         {
@@ -92,6 +92,7 @@ public class CabinetService implements com.company.interfaces.Cabinet, Serializa
             {
                 System.out.println(e.getNumber()+"   "+e.getHasBed());
             }
+            return (ArrayList<com.company.entities.Cabinet>)empList;
         }
         catch(Exception ee)
         {
@@ -105,5 +106,6 @@ public class CabinetService implements com.company.interfaces.Cabinet, Serializa
                 ie.printStackTrace();
             }
         }
+        return null;
     }
 }

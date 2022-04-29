@@ -8,5 +8,5 @@ public interface Cabinet {
     public String toString(com.company.entities.Cabinet cabinet);
 
     public void writeCabinete(ArrayList<com.company.entities.Cabinet> productList);
-    public void readCabinete();
+    public ArrayList<com.company.entities.Cabinet>  readCabinete();
 }

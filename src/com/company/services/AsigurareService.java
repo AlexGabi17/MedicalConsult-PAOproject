@@ -100,7 +100,7 @@ public class AsigurareService implements Asigurare, Serializable {
         catch (IOException e){}
     }
     @Override
-    public void readAsigurari()
+    public ArrayList<com.company.entities.Asigurare> readAsigurari()
     {
         //Delimiters used in the CSV file
 
@@ -135,6 +135,7 @@ public class AsigurareService implements Asigurare, Serializable {
             {
                 System.out.println(e.getId()+"   "+e.getTipAsigurare() + " " +e.getNumeCasaSanatate() + e.getDataExpirare());
             }
+            return (ArrayList<com.company.entities.Asigurare>) empList;
         }
         catch(Exception ee)
         {
@@ -148,6 +149,7 @@ public class AsigurareService implements Asigurare, Serializable {
                 ie.printStackTrace();
             }
         }
+        return null;
     }
 
 }

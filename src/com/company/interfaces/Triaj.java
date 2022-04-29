@@ -8,5 +8,5 @@ public interface Triaj{
     public String getSefTriaj(com.company.entities.Triaj obj);
     public String toString(com.company.entities.Triaj triaj);
     public void writeTriaj(ArrayList<com.company.entities.Triaj> productList);
-    public void readTriaj();
+    public ArrayList<com.company.entities.Triaj> readTriaj();
 }

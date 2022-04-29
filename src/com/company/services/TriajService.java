@@ -69,7 +69,7 @@ public class TriajService implements Triaj, Serializable {
     }
 
     @Override
-    public void readTriaj() {
+    public ArrayList<com.company.entities.Triaj> readTriaj() {
         BufferedReader br = null;
         try
         {
@@ -99,6 +99,7 @@ public class TriajService implements Triaj, Serializable {
             {
                 System.out.println(e.getNumber()+"   "+e.getSefTriaj());
             }
+            return (ArrayList<com.company.entities.Triaj>)empList;
         }
         catch(Exception ee)
         {
@@ -112,5 +113,6 @@ public class TriajService implements Triaj, Serializable {
                 ie.printStackTrace();
             }
         }
+        return null;
     }
 }

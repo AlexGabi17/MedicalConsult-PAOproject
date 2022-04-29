@@ -17,5 +17,5 @@ public interface Asigurare {
     public String toString(com.company.entities.Asigurare asigurare);
 
     public void writeAsigurari(ArrayList<com.company.entities.Asigurare> productList);
-    public void readAsigurari();
+    public ArrayList<com.company.entities.Asigurare> readAsigurari();
 }

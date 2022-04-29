@@ -61,7 +61,7 @@ public class DiagnosticService implements Diagnostic, Serializable {
         catch (IOException e){}
     }
     @Override
-    public void readDiagnostic()
+    public ArrayList<com.company.entities.Diagnostic> readDiagnostic()
     {
         //Delimiters used in the CSV file
 
@@ -94,6 +94,7 @@ public class DiagnosticService implements Diagnostic, Serializable {
             {
                 System.out.println(e.getUrgenta()+"   "+e.getDiagnostic());
             }
+            return (ArrayList<com.company.entities.Diagnostic>)empList;
         }
         catch(Exception ee)
         {
@@ -107,6 +108,9 @@ public class DiagnosticService implements Diagnostic, Serializable {
                 ie.printStackTrace();
             }
         }
+
+        return null;
     }
+
 
 }

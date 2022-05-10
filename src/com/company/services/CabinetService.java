@@ -1,14 +1,18 @@
 package com.company.services;
 
-import com.company.entities.Diagnostic;
-import com.company.interfaces.Cabinet;
+import com.company.entities.Cabinet;
+import com.company.interfaces.ICabinet;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CabinetService implements com.company.interfaces.Cabinet, Serializable {
+public class CabinetService implements ICabinet, Serializable {
     private static CabinetService single_instance = null;
+
+    private CabinetService(){
+
+    }
 
     public static CabinetService getInstance()
     {
@@ -19,7 +23,7 @@ public class CabinetService implements com.company.interfaces.Cabinet, Serializa
     }
 
     @Override
-    public String toString(com.company.entities.Cabinet cabinet) {
+    public String toString(Cabinet cabinet) {
         return "Cabinet{" +
                 "number='" + cabinet.getNumber() + "\'" +
                 "hasBed='" + cabinet.getHasBed() +
@@ -30,7 +34,7 @@ public class CabinetService implements com.company.interfaces.Cabinet, Serializa
 
 
     @Override
-    public void writeCabinete(ArrayList<com.company.entities.Cabinet> productList) {
+    public void writeCabinete(List<Cabinet> productList) {
         try {
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("cabinete.csv", true), "UTF-8"));
             //verify if header exist
@@ -43,7 +47,7 @@ public class CabinetService implements com.company.interfaces.Cabinet, Serializa
                 bw.newLine();
             }
             //
-            for (com.company.entities.Cabinet cabinet: productList)
+            for (Cabinet cabinet: productList)
             {
                 StringBuffer oneLine = new StringBuffer();
                 oneLine.append(cabinet.getNumber());
@@ -62,7 +66,7 @@ public class CabinetService implements com.company.interfaces.Cabinet, Serializa
 
 
     @Override
-    public ArrayList<com.company.entities.Cabinet>  readCabinete() {
+    public List<Cabinet>  readCabinete() {
         BufferedReader br = null;
         try
         {
@@ -70,7 +74,7 @@ public class CabinetService implements com.company.interfaces.Cabinet, Serializa
             br = new BufferedReader(new FileReader("cabinete.csv"));
 
             //Create List for holding Employee objects
-            List<com.company.entities.Cabinet> empList = new ArrayList<com.company.entities.Cabinet>();
+            List<Cabinet> empList = new ArrayList<com.company.entities.Cabinet>();
 
             String line = "";
             //Read to skip the header
@@ -81,14 +85,14 @@ public class CabinetService implements com.company.interfaces.Cabinet, Serializa
 
                 if (data.length > 0) {
                     //Save the employee details in Employee object
-                    com.company.entities.Cabinet obj = new com.company.entities.Cabinet(Integer.parseInt(data[0]),
+                    Cabinet obj = new Cabinet(Integer.parseInt(data[0]),
                             Boolean.parseBoolean(data[1])
                     );
                     empList.add(obj);
                 }
             }
             //Lets print the Employee List
-            for(com.company.entities.Cabinet e : empList)
+            for(Cabinet e : empList)
             {
                 System.out.println(e.getNumber()+"   "+e.getHasBed());
             }

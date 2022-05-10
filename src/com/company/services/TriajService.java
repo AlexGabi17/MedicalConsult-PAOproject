@@ -1,15 +1,19 @@
 package com.company.services;
 
-import com.company.entities.Cabinet;
-import com.company.interfaces.Triaj;
+import com.company.entities.Triaj;
+import com.company.interfaces.ITriaj;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TriajService implements Triaj, Serializable {
+public class TriajService implements ITriaj, Serializable {
 
     private static TriajService single_instance = null;
+
+    private TriajService(){
+
+    }
 
     public static TriajService getInstance()
     {
@@ -23,14 +27,14 @@ public class TriajService implements Triaj, Serializable {
 
 
     @Override
-    public String getSefTriaj(com.company.entities.Triaj obj) {
+    public String getSefTriaj(Triaj obj) {
         return obj.getSefTriaj();
     }
 
 
 
     @Override
-    public String toString(com.company.entities.Triaj triaj) {
+    public String toString(Triaj triaj) {
         return "Triaj{" +
                 "number='" + triaj.getNumber() + "\'" +
                 "hasBed='" + triaj.getSefTriaj() +
@@ -38,7 +42,7 @@ public class TriajService implements Triaj, Serializable {
     }
 
     @Override
-    public void writeTriaj(ArrayList<com.company.entities.Triaj> productList) {
+    public void writeTriaj(List<Triaj> productList) {
         try {
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("triaj.csv", true), "UTF-8"));
             //verify if header exist
@@ -51,7 +55,7 @@ public class TriajService implements Triaj, Serializable {
                 bw.newLine();
             }
             //
-            for (com.company.entities.Triaj triaj: productList)
+            for (Triaj triaj: productList)
             {
                 StringBuffer oneLine = new StringBuffer();
                 oneLine.append(triaj.getNumber());
@@ -69,7 +73,7 @@ public class TriajService implements Triaj, Serializable {
     }
 
     @Override
-    public ArrayList<com.company.entities.Triaj> readTriaj() {
+    public List<Triaj> readTriaj() {
         BufferedReader br = null;
         try
         {
@@ -77,7 +81,7 @@ public class TriajService implements Triaj, Serializable {
             br = new BufferedReader(new FileReader("triaj.csv"));
 
             //Create List for holding Employee objects
-            List<com.company.entities.Triaj> empList = new ArrayList<com.company.entities.Triaj>();
+            List<Triaj> empList = new ArrayList<com.company.entities.Triaj>();
 
             String line = "";
             //Read to skip the header
@@ -88,7 +92,7 @@ public class TriajService implements Triaj, Serializable {
 
                 if (data.length > 0) {
                     //Save the employee details in Employee object
-                    com.company.entities.Triaj obj = new com.company.entities.Triaj(Integer.parseInt(data[0]),
+                    Triaj obj = new Triaj(Integer.parseInt(data[0]),
                             data[1]
                     );
                     empList.add(obj);
@@ -99,7 +103,7 @@ public class TriajService implements Triaj, Serializable {
             {
                 System.out.println(e.getNumber()+"   "+e.getSefTriaj());
             }
-            return (ArrayList<com.company.entities.Triaj>)empList;
+            return (ArrayList<Triaj>)empList;
         }
         catch(Exception ee)
         {

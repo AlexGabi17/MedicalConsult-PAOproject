@@ -1,9 +1,14 @@
 package com.company.services;
 
-import com.company.interfaces.Pacient;
+import com.company.entities.Pacient;
+import com.company.interfaces.IPacient;
 
-public class PacientService implements Pacient {
+public class PacientService implements IPacient {
     private static PacientService single_instance = null;
+
+    private PacientService(){
+
+    }
 
     public static PacientService getInstance()
     {
@@ -13,7 +18,7 @@ public class PacientService implements Pacient {
         return single_instance;
     }
     @Override
-    public String showPacientInfo(com.company.entities.Pacient obj) {
+    public String showPacientInfo(Pacient obj) {
         String result = new String();
         result = "Pacientul " + obj.getNume() + " cu id-ul " + obj.getId() + " are diagnosticul " + obj.getDiagnostic().getDiagnostic();
 
@@ -22,12 +27,12 @@ public class PacientService implements Pacient {
 
 
     @Override
-    public String tipAsigurare(com.company.entities.Pacient obj) {
+    public String tipAsigurare(Pacient obj) {
         return obj.getAsigurare().getTipAsigurare();
     }
 
     @Override
-    public Boolean verificaFonduri(com.company.entities.Pacient obj) {
+    public Boolean verificaFonduri(Pacient obj) {
         String tipAsigurare = obj.getAsigurare().getTipAsigurare();
 
         if(tipAsigurare == "stat")
@@ -40,12 +45,12 @@ public class PacientService implements Pacient {
     }
 
     @Override
-    public int urgenta(com.company.entities.Pacient obj) {
+    public int urgenta(Pacient obj) {
         return obj.getDiagnostic().getUrgenta();
     }
 
     @Override
-    public String showProgramari(com.company.entities.Pacient obj) {
+    public String showProgramari(Pacient obj) {
         String result = new String();
         result = "";
         int index = 0;

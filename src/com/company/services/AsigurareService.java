@@ -1,60 +1,30 @@
 package com.company.services;
 
-import com.company.interfaces.Asigurare;
+import com.company.entities.Asigurare;
+import com.company.interfaces.IAsigurare;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AsigurareService implements Asigurare, Serializable {
+public class AsigurareService implements IAsigurare, Serializable {
 
-    private static AsigurareService single_instance = null;
+    private static AsigurareService singleInstance = null;
+
+    private AsigurareService(){
+
+    }
 
     public static AsigurareService getInstance()
     {
-        if (single_instance == null)
-            single_instance = new AsigurareService();
+        if (singleInstance == null)
+            singleInstance = new AsigurareService();
 
-        return single_instance;
+        return singleInstance;
     }
 
     @Override
-    public int getId(com.company.entities.Asigurare obj) {
-        return obj.getId();
-    }
-
-    @Override
-    public String getTipAsigurare(com.company.entities.Asigurare obj) {
-        return obj.getTipAsigurare();
-    }
-
-    @Override
-    public String getNumeCasaSanatate(com.company.entities.Asigurare obj) {
-        return obj.getNumeCasaSanatate();
-    }
-
-    @Override
-    public String getDataExpirare(com.company.entities.Asigurare obj) {
-        return obj.getDataExpirare();
-    }
-
-    @Override
-    public void changeTipAsigurare(com.company.entities.Asigurare obj, String tip) {
-        obj.setTipAsigurare(tip);
-    }
-
-    @Override
-    public void changeNumeCasaSanatate(com.company.entities.Asigurare obj, String casa){
-        obj.setNumeCasaSanatate(casa);
-    }
-
-    @Override
-    public void changeDataExpirare(com.company.entities.Asigurare obj, String dataExpirare){
-        obj.setDataExpirare(dataExpirare);
-    }
-
-    @Override
-    public String toString(com.company.entities.Asigurare asigurare){
+    public String toString(Asigurare asigurare){
         return "Asigurare{" +
                 "id='" + asigurare.getId() + '\''+
                 ",  tipAsigurare='" + asigurare.getTipAsigurare() +'\''+
@@ -65,7 +35,7 @@ public class AsigurareService implements Asigurare, Serializable {
 
     private static final String CSV_SEPARATOR = ",";
     @Override
-    public void writeAsigurari(ArrayList<com.company.entities.Asigurare> productList)
+    public void writeAsigurari(List<Asigurare> productList)
     {
         try {
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("asigurari.csv", true), "UTF-8"));
@@ -100,7 +70,7 @@ public class AsigurareService implements Asigurare, Serializable {
         catch (IOException e){}
     }
     @Override
-    public ArrayList<com.company.entities.Asigurare> readAsigurari()
+    public List<Asigurare> readAsigurari()
     {
         //Delimiters used in the CSV file
 
@@ -112,7 +82,7 @@ public class AsigurareService implements Asigurare, Serializable {
             br = new BufferedReader(new FileReader("asigurari.csv"));
 
             //Create List for holding Employee objects
-            List<com.company.entities.Asigurare> empList = new ArrayList<com.company.entities.Asigurare>();
+            List<Asigurare> empList = new ArrayList<com.company.entities.Asigurare>();
 
             String line = "";
             //Read to skip the header
@@ -123,7 +93,7 @@ public class AsigurareService implements Asigurare, Serializable {
 
                 if (data.length > 0) {
                     //Save the employee details in Employee object
-                    com.company.entities.Asigurare obj = new com.company.entities.Asigurare(Integer.parseInt(data[0]),
+                    Asigurare obj = new Asigurare(Integer.parseInt(data[0]),
                             data[1],
                             data[2],
                             data[3]);
@@ -131,11 +101,11 @@ public class AsigurareService implements Asigurare, Serializable {
                 }
             }
             //Lets print the Employee List
-            for(com.company.entities.Asigurare e : empList)
+            for(Asigurare e : empList)
             {
                 System.out.println(e.getId()+"   "+e.getTipAsigurare() + " " +e.getNumeCasaSanatate() + e.getDataExpirare());
             }
-            return (ArrayList<com.company.entities.Asigurare>) empList;
+            return (ArrayList<Asigurare>) empList;
         }
         catch(Exception ee)
         {

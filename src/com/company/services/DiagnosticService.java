@@ -1,14 +1,19 @@
 package com.company.services;
 
-import com.company.interfaces.Diagnostic;
+import com.company.entities.Diagnostic;
+import com.company.interfaces.IDiagnostic;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DiagnosticService implements Diagnostic, Serializable {
+public class DiagnosticService implements IDiagnostic, Serializable {
 
     private static DiagnosticService single_instance = null;
+
+    private DiagnosticService(){
+
+    }
 
     public static DiagnosticService getInstance()
     {
@@ -19,7 +24,7 @@ public class DiagnosticService implements Diagnostic, Serializable {
     }
 
     @Override
-    public String toString(com.company.entities.Diagnostic diagnostic){
+    public String toString(Diagnostic diagnostic){
         return "Diagnostic{" +
                 "urgenta='" + diagnostic.getUrgenta() + '\''+
                 ",  diagnostic='" + diagnostic.getDiagnostic() +
@@ -30,7 +35,7 @@ public class DiagnosticService implements Diagnostic, Serializable {
 
     private static final String CSV_SEPARATOR = ",";
     @Override
-    public void writeDiagnostic(ArrayList<com.company.entities.Diagnostic> productList)
+    public void writeDiagnostic(List<Diagnostic> productList)
     {
         try {
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("diagnostice.csv", true), "UTF-8"));
@@ -44,7 +49,7 @@ public class DiagnosticService implements Diagnostic, Serializable {
                 bw.newLine();
             }
             //
-            for (com.company.entities.Diagnostic diagnostic : productList)
+            for (Diagnostic diagnostic : productList)
             {
                 StringBuffer oneLine = new StringBuffer();
                 oneLine.append(diagnostic.getUrgenta());
@@ -61,7 +66,7 @@ public class DiagnosticService implements Diagnostic, Serializable {
         catch (IOException e){}
     }
     @Override
-    public ArrayList<com.company.entities.Diagnostic> readDiagnostic()
+    public List<Diagnostic> readDiagnostic()
     {
         //Delimiters used in the CSV file
 
@@ -84,7 +89,7 @@ public class DiagnosticService implements Diagnostic, Serializable {
 
                 if (data.length > 0) {
                     //Save the employee details in Employee object
-                    com.company.entities.Diagnostic obj = new com.company.entities.Diagnostic(Integer.parseInt(data[0]),
+                    Diagnostic obj = new Diagnostic(Integer.parseInt(data[0]),
                             data[1]);
                     empList.add(obj);
                 }
@@ -94,7 +99,7 @@ public class DiagnosticService implements Diagnostic, Serializable {
             {
                 System.out.println(e.getUrgenta()+"   "+e.getDiagnostic());
             }
-            return (ArrayList<com.company.entities.Diagnostic>)empList;
+            return (ArrayList<Diagnostic>)empList;
         }
         catch(Exception ee)
         {

@@ -9,6 +9,9 @@ import java.util.List;
 
 public class TriajService implements ITriaj, Serializable {
 
+    private AuditService auditService = AuditService.getInstance();
+
+
     private static TriajService single_instance = null;
 
     private TriajService(){
@@ -66,6 +69,8 @@ public class TriajService implements ITriaj, Serializable {
             }
             bw.flush();
             bw.close();
+            auditService.writeAudit("insertion", "Triaj", productList.size());
+
         }
         catch (UnsupportedEncodingException e) {}
         catch (FileNotFoundException e){}
@@ -103,6 +108,8 @@ public class TriajService implements ITriaj, Serializable {
             {
                 System.out.println(e.getNumber()+"   "+e.getSefTriaj());
             }
+            auditService.writeAudit("read", "Triaj", 0);
+
             return (ArrayList<Triaj>)empList;
         }
         catch(Exception ee)

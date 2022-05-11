@@ -9,6 +9,9 @@ import java.util.List;
 
 public class DiagnosticService implements IDiagnostic, Serializable {
 
+    private AuditService auditService = AuditService.getInstance();
+
+
     private static DiagnosticService single_instance = null;
 
     private DiagnosticService(){
@@ -60,6 +63,10 @@ public class DiagnosticService implements IDiagnostic, Serializable {
             }
             bw.flush();
             bw.close();
+
+            auditService.writeAudit("insertion", "Diagnostic", productList.size());
+
+
         }
         catch (UnsupportedEncodingException e) {}
         catch (FileNotFoundException e){}
@@ -78,7 +85,7 @@ public class DiagnosticService implements IDiagnostic, Serializable {
             br = new BufferedReader(new FileReader("diagnostice.csv"));
 
             //Create List for holding Employee objects
-            List<com.company.entities.Diagnostic> empList = new ArrayList<com.company.entities.Diagnostic>();
+            List<Diagnostic> empList = new ArrayList<Diagnostic>();
 
             String line = "";
             //Read to skip the header
@@ -95,10 +102,12 @@ public class DiagnosticService implements IDiagnostic, Serializable {
                 }
             }
             //Lets print the Employee List
-            for(com.company.entities.Diagnostic e : empList)
+            for(Diagnostic e : empList)
             {
                 System.out.println(e.getUrgenta()+"   "+e.getDiagnostic());
             }
+            auditService.writeAudit("read", "Diagnostic", 0);
+
             return (ArrayList<Diagnostic>)empList;
         }
         catch(Exception ee)

@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CabinetService implements ICabinet, Serializable {
+    private AuditService auditService = AuditService.getInstance();
+
     private static CabinetService single_instance = null;
 
     private CabinetService(){
@@ -58,6 +60,8 @@ public class CabinetService implements ICabinet, Serializable {
             }
             bw.flush();
             bw.close();
+            auditService.writeAudit("insertion", "Cabinet", productList.size());
+
         }
         catch (UnsupportedEncodingException e) {}
         catch (FileNotFoundException e){}
@@ -96,6 +100,8 @@ public class CabinetService implements ICabinet, Serializable {
             {
                 System.out.println(e.getNumber()+"   "+e.getHasBed());
             }
+            auditService.writeAudit("read", "Cabinet", 0);
+
             return (ArrayList<com.company.entities.Cabinet>)empList;
         }
         catch(Exception ee)

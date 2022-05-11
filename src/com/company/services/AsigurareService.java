@@ -9,6 +9,7 @@ import java.util.List;
 
 public class AsigurareService implements IAsigurare, Serializable {
 
+    private AuditService auditService = AuditService.getInstance();
     private static AsigurareService singleInstance = null;
 
     private AsigurareService(){
@@ -49,7 +50,7 @@ public class AsigurareService implements IAsigurare, Serializable {
                 bw.newLine();
             }
             //
-            for (com.company.entities.Asigurare asigurari: productList)
+            for (Asigurare asigurari: productList)
             {
                 StringBuffer oneLine = new StringBuffer();
                 oneLine.append(asigurari.getId());
@@ -64,6 +65,9 @@ public class AsigurareService implements IAsigurare, Serializable {
             }
             bw.flush();
             bw.close();
+
+            auditService.writeAudit("insertion", "Asigurare", productList.size());
+
         }
         catch (UnsupportedEncodingException e) {}
         catch (FileNotFoundException e){}
@@ -105,6 +109,8 @@ public class AsigurareService implements IAsigurare, Serializable {
             {
                 System.out.println(e.getId()+"   "+e.getTipAsigurare() + " " +e.getNumeCasaSanatate() + e.getDataExpirare());
             }
+            auditService.writeAudit("read", "Asigurare", 0);
+
             return (ArrayList<Asigurare>) empList;
         }
         catch(Exception ee)

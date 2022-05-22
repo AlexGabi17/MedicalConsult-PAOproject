@@ -1,10 +1,24 @@
 package com.company.services;
 
-import com.company.interfaces.Room;
+import com.company.entities.Room;
+import com.company.interfaces.IRoom;
 
-public class RoomService implements Room {
+public class RoomService implements IRoom {
+    private static RoomService single_instance = null;
+
+    private RoomService(){
+
+    }
+
+    public static RoomService getInstance()
+    {
+        if (single_instance == null) {
+            single_instance = new RoomService();
+        }
+        return single_instance;
+    }
     @Override
-    public int getNumber(com.company.entities.Room obj) {
+    public int getNumber(Room obj) {
         return obj.getNumber();
     }
 }

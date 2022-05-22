@@ -1,0 +1,10 @@
+command,entityType,numberOfInsertions,date
+insertion,Diagnostic,2,Wed May 11 15:46:32 EEST 2022
+insertion,Diagnostic,1,Wed May 11 15:46:32 EEST 2022
+read,Diagnostic,0,Wed May 11 15:46:32 EEST 2022
+insertion,Asigurare,4,Wed May 11 15:46:32 EEST 2022
+read,Asigurare,0,Wed May 11 15:46:32 EEST 2022
+insertion,Cabinet,5,Wed May 11 15:46:32 EEST 2022
+read,Cabinet,0,Wed May 11 15:46:32 EEST 2022
+insertion,Triaj,4,Wed May 11 15:46:32 EEST 2022
+read,Triaj,0,Wed May 11 15:46:32 EEST 2022

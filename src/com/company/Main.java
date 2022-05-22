@@ -4,7 +4,10 @@ import com.company.entities.*;
 import com.company.services.*;
 
 
+import java.io.*;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 
@@ -50,11 +53,13 @@ public class Main {
 
         // Initializare servicii
 
-        PacientService pacientService = new PacientService();
-        DoctorService doctorService = new DoctorService();
-        AsigurareService asigurareService = new AsigurareService();
-        RoomService roomService = new RoomService();
-        TriajService triajService = new TriajService();
+        PacientService pacientService = PacientService.getInstance();
+        DoctorService doctorService = DoctorService.getInstance();
+        AsigurareService asigurareService = AsigurareService.getInstance();
+        RoomService roomService = RoomService.getInstance();
+        TriajService triajService = TriajService.getInstance();
+        DiagnosticService diagnosticService = DiagnosticService.getInstance();
+        CabinetService cabinetService = CabinetService.getInstance();
 
         //Apelam metode din servicii
 
@@ -67,6 +72,48 @@ public class Main {
         doctorService.changeName(doc1,"Catalin");
 
         System.out.println("Dupa modificarea din serviciu -> nume:" + doctorService.getNume(doc1));
+
+
+        //ETAPA 2
+
+        //writeDiagnostic();
+        List<Diagnostic> diagnostics = new ArrayList<Diagnostic>();
+        diagnostics.add(new Diagnostic(2,"tuse naspa"));
+        diagnostics.add(new Diagnostic(0,"covid"));
+        diagnosticService.writeDiagnostic(diagnostics);
+        List<Diagnostic> diagnostics2 = new ArrayList<Diagnostic>();
+        diagnostics2.add(new Diagnostic(4,"asd"));
+
+        diagnosticService.writeDiagnostic(diagnostics2);
+        diagnosticService.readDiagnostic();
+
+        List<Asigurare> asigurari = new ArrayList<Asigurare>();
+        asigurari.add(new Asigurare(1, "stat","CASMB","20-oct-2023"));
+        asigurari.add(new Asigurare(2, "stat","CASMB","23-nov-2021"));
+        asigurari.add(new Asigurare(3, "privat","societate privata","23-july-2024"));
+        asigurari.add(new Asigurare(4, "privat","societate privata","01-june-2022"));
+
+        asigurareService.writeAsigurari(asigurari);
+        asigurareService.readAsigurari();
+
+        List<Cabinet> cabinete = new ArrayList<Cabinet>();
+        cabinete.add(new Cabinet(1,true));
+        cabinete.add(new Cabinet(2,true));
+        cabinete.add(new Cabinet(3,true));
+        cabinete.add(new Cabinet(4,true));
+        cabinete.add(new Cabinet(5,false));
+
+        cabinetService.writeCabinete(cabinete);
+        cabinetService.readCabinete();
+
+        List<Triaj> triaje = new ArrayList<Triaj>();
+        triaje.add(new Triaj(1,"Popescu"));
+        triaje.add(new Triaj(2,"Ionescu"));
+        triaje.add(new Triaj(3,"Cornel"));
+        triaje.add(new Triaj(4,"Ioana"));
+        triajService.writeTriaj(triaje);
+        triajService.readTriaj();
+
 
     }
 }

@@ -158,4 +158,21 @@ public class AsigurareRepository {
 
     }
 
+    public void deleteById(int id) {
+        String updateNameSql = "DELETE FROM asigurare WHERE id=?";
+
+        Connection connection = DatabaseConfiguration.getDatabaseConnection();
+        try (PreparedStatement preparedStatement = connection.prepareStatement(updateNameSql)) {
+            preparedStatement.setInt(1, id);
+
+            preparedStatement.executeUpdate();
+            auditService.writeAudit("delete", "asigurare", -1);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        DatabaseConfiguration.closeDatabaseConnection();
+
+    }
+
 }

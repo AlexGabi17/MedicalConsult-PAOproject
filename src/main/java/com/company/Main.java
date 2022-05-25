@@ -2,7 +2,9 @@ package com.company;
 
 import com.company.entities.*;
 import com.company.repositories.AsigurareRepository;
+import com.company.repositories.CabinetRepository;
 import com.company.repositories.DiagnosticRepository;
+import com.company.repositories.TriajRepository;
 import com.company.services.*;
 
 
@@ -122,26 +124,43 @@ public class Main {
 
         AsigurareRepository asigurareRepository = AsigurareRepository.getInstance();
         DiagnosticRepository diagnosticRepository = DiagnosticRepository.getInstance();
-//        asigurareRepository.createTable();
-//        asigurareRepository.addAsigurare(asigurari.get(0));
-//        asigurareRepository.addAsigurare(asigurari.get(1));
-//        asigurareRepository.displayAsigurareById(2);
-//        asigurareRepository.displayAsigurari();
+        CabinetRepository cabinetRepository = CabinetRepository.getInstance();
+        TriajRepository triajRepository = TriajRepository.getInstance();
+        asigurareRepository.createTable();
+        asigurareRepository.addAsigurare(asigurari.get(0));
+        asigurareRepository.addAsigurare(asigurari.get(1));
+        asigurareRepository.displayAsigurareById(2);
+        asigurareRepository.displayAsigurari();
+        asigurareRepository.deleteById(2);
 
-//        asigurareRepository.updateAsigurareTip("privat",3);
-//        asigurareRepository.updateAsigurareTip("Regina Maria",3);
-//        asigurareRepository.updateAsigurareDataExpirare("23-march-2024", 3);
-//        asigurareRepository.displayAsigurareById(3);
+        asigurareRepository.updateAsigurareTip("privat",3);
+        asigurareRepository.updateAsigurareTip("Regina Maria",3);
+        asigurareRepository.updateAsigurareDataExpirare("23-march-2024", 3);
+        asigurareRepository.displayAsigurareById(3);
 
 
-        //diagnosticRepository.createTable();
-        //diagnosticRepository.addDiagnostic(diagnostics.get(0));
-        //diagnosticRepository.addDiagnostic(diagnostics.get(1));
-        //diagnosticRepository.addDiagnostic(diagnostics.get(2));
-        diagnosticRepository.updateDiagnostic("picior rupt",1);
-        diagnosticRepository.updateDiagnostic("umar luxat", 1);
-        diagnosticRepository.displayDiagnosticById(1);
-        diagnosticRepository.displayDiagnostics();
+        diagnosticRepository.createTable();
+        diagnosticRepository.addDiagnostic(diagnostics.get(0));
+        diagnosticRepository.addDiagnostic(diagnostics.get(1));
+        diagnosticRepository.deleteById(1);
+
+
+
+        cabinetRepository.createTable();
+        cabinetRepository.addCabinet(cabinete.get(0));
+        cabinetRepository.addCabinet(cabinete.get(1));
+        cabinetRepository.updateHasBed(false, 1);
+        cabinetRepository.displayCabinetById(1);
+        cabinetRepository.deleteById(1);
+
+        triajRepository.createTable();
+        triajRepository.addTriaj(triaje.get(0));
+        triajRepository.addTriaj(triaje.get(1));
+        triajRepository.addTriaj(triaje.get(2));
+        triajRepository.updateSefTriaj("Dominic Armand Stamatoiu", 1);
+        triajRepository.displayTriajById(1);
+        triajRepository.deleteById(1);
+
 
     }
 }

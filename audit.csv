@@ -8,3 +8,275 @@ insertion,Cabinet,5,Wed May 11 15:46:32 EEST 2022
 read,Cabinet,0,Wed May 11 15:46:32 EEST 2022
 insertion,Triaj,4,Wed May 11 15:46:32 EEST 2022
 read,Triaj,0,Wed May 11 15:46:32 EEST 2022
+insertion,Diagnostic,2,Sun May 22 17:56:01 EEST 2022
+insertion,Diagnostic,1,Sun May 22 17:56:01 EEST 2022
+read,Diagnostic,0,Sun May 22 17:56:01 EEST 2022
+insertion,Asigurare,4,Sun May 22 17:56:01 EEST 2022
+read,Asigurare,0,Sun May 22 17:56:01 EEST 2022
+insertion,Cabinet,5,Sun May 22 17:56:01 EEST 2022
+read,Cabinet,0,Sun May 22 17:56:01 EEST 2022
+insertion,Triaj,4,Sun May 22 17:56:01 EEST 2022
+read,Triaj,0,Sun May 22 17:56:01 EEST 2022
+insertion,Diagnostic,2,Sun May 22 17:56:01 EEST 2022
+insertion,Diagnostic,1,Sun May 22 17:56:02 EEST 2022
+read,Diagnostic,0,Sun May 22 17:56:02 EEST 2022
+insertion,Asigurare,4,Sun May 22 17:56:02 EEST 2022
+read,Asigurare,0,Sun May 22 17:56:02 EEST 2022
+insertion,Cabinet,5,Sun May 22 17:56:02 EEST 2022
+read,Cabinet,0,Sun May 22 17:56:02 EEST 2022
+insertion,Triaj,4,Sun May 22 17:56:02 EEST 2022
+read,Triaj,0,Sun May 22 17:56:02 EEST 2022
+insertion,Diagnostic,2,Sun May 22 17:56:26 EEST 2022
+insertion,Diagnostic,1,Sun May 22 17:56:26 EEST 2022
+read,Diagnostic,0,Sun May 22 17:56:26 EEST 2022
+insertion,Asigurare,4,Sun May 22 17:56:26 EEST 2022
+read,Asigurare,0,Sun May 22 17:56:26 EEST 2022
+insertion,Cabinet,5,Sun May 22 17:56:26 EEST 2022
+read,Cabinet,0,Sun May 22 17:56:26 EEST 2022
+insertion,Triaj,4,Sun May 22 17:56:26 EEST 2022
+read,Triaj,0,Sun May 22 17:56:26 EEST 2022
+insertion,Diagnostic,2,Tue May 24 12:43:34 EEST 2022
+insertion,Diagnostic,2,Tue May 24 12:46:03 EEST 2022
+insertion,Diagnostic,2,Tue May 24 12:46:42 EEST 2022
+insertion,Diagnostic,2,Tue May 24 12:47:02 EEST 2022
+insertion,Diagnostic,2,Tue May 24 12:47:17 EEST 2022
+insertion,Diagnostic,2,Tue May 24 12:47:27 EEST 2022
+insertion,Diagnostic,2,Tue May 24 12:54:38 EEST 2022
+insertion,Diagnostic,2,Tue May 24 12:57:05 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:07:40 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:11:27 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:12:09 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:18:35 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:19:08 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:20:42 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:20:52 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:22:46 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:25:16 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:25:32 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:27:54 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:29:01 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:29:16 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:43:57 EEST 2022
+updateTip,asigurare,0,Tue May 24 13:43:57 EEST 2022
+updateTip,asigurare,0,Tue May 24 13:43:57 EEST 2022
+updateDataExpirare,asigurare,0,Tue May 24 13:43:57 EEST 2022
+getById,asigurare,0,Tue May 24 13:43:57 EEST 2022
+insertion,Diagnostic,2,Tue May 24 13:50:42 EEST 2022
+create Table,asigurare,0,Tue May 24 13:50:42 EEST 2022
+insert,asigurare,1,Tue May 24 13:50:42 EEST 2022
+insert,asigurare,1,Tue May 24 13:50:42 EEST 2022
+getById,asigurare,0,Tue May 24 13:50:42 EEST 2022
+getAll,asigurare,0,Tue May 24 13:50:42 EEST 2022
+getAll,asigurare,0,Tue May 24 13:50:42 EEST 2022
+updateTip,asigurare,0,Tue May 24 13:50:42 EEST 2022
+updateTip,asigurare,0,Tue May 24 13:50:42 EEST 2022
+updateDataExpirare,asigurare,0,Tue May 24 13:50:42 EEST 2022
+getById,asigurare,0,Tue May 24 13:50:42 EEST 2022
+insertion,Diagnostic,2,Tue May 24 14:38:39 EEST 2022
+create Table,diagnostic,0,Tue May 24 14:38:39 EEST 2022
+insert,diagnostic,1,Tue May 24 14:38:39 EEST 2022
+insert,diagnostic,1,Tue May 24 14:38:39 EEST 2022
+insertion,Diagnostic,2,Tue May 24 14:39:02 EEST 2022
+create Table,diagnostic,0,Tue May 24 14:39:02 EEST 2022
+insert,diagnostic,1,Tue May 24 14:39:02 EEST 2022
+insert,diagnostic,1,Tue May 24 14:39:02 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 14:39:02 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 14:39:02 EEST 2022
+insertion,Diagnostic,2,Tue May 24 14:40:31 EEST 2022
+create Table,diagnostic,0,Tue May 24 14:40:32 EEST 2022
+insert,diagnostic,1,Tue May 24 14:40:32 EEST 2022
+insert,diagnostic,1,Tue May 24 14:40:32 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 14:40:32 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 14:40:32 EEST 2022
+insertion,Diagnostic,2,Tue May 24 14:41:18 EEST 2022
+create Table,diagnostic,0,Tue May 24 14:41:18 EEST 2022
+insert,diagnostic,1,Tue May 24 14:41:18 EEST 2022
+insert,diagnostic,1,Tue May 24 14:41:18 EEST 2022
+insertion,Diagnostic,2,Tue May 24 14:43:27 EEST 2022
+insertion,Diagnostic,2,Tue May 24 14:47:18 EEST 2022
+insertion,Diagnostic,2,Tue May 24 14:47:33 EEST 2022
+insertion,Diagnostic,2,Tue May 24 15:00:28 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 15:00:28 EEST 2022
+insertion,Diagnostic,2,Tue May 24 15:01:15 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 15:01:15 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 15:01:15 EEST 2022
+insertion,Diagnostic,2,Tue May 24 15:01:21 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 15:01:21 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 15:01:21 EEST 2022
+insertion,Diagnostic,2,Tue May 24 15:03:19 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 15:03:19 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 15:03:19 EEST 2022
+getById,diagnostic,0,Tue May 24 15:03:20 EEST 2022
+insertion,Diagnostic,2,Tue May 24 15:03:29 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 15:03:29 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 15:03:29 EEST 2022
+getById,diagnostic,0,Tue May 24 15:03:29 EEST 2022
+insertion,Diagnostic,2,Tue May 24 15:03:42 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 15:03:43 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 15:03:43 EEST 2022
+getById,diagnostic,0,Tue May 24 15:03:43 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:03:43 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:03:43 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:03:43 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:03:43 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:03:43 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:03:43 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:03:43 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:03:43 EEST 2022
+insertion,Diagnostic,2,Tue May 24 15:04:36 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 15:04:36 EEST 2022
+updateDiagnostic,diagnostic,0,Tue May 24 15:04:36 EEST 2022
+getById,diagnostic,0,Tue May 24 15:04:36 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:04:36 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:04:36 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:04:36 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:04:36 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:04:36 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:04:36 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:04:36 EEST 2022
+getAll,diagnostic,0,Tue May 24 15:04:36 EEST 2022
+insertion,Diagnostic,2,Wed May 25 18:20:50 EEST 2022
+insertion,Diagnostic,2,Wed May 25 18:49:19 EEST 2022
+create Table,cabinet,0,Wed May 25 18:49:19 EEST 2022
+insertion,Diagnostic,2,Wed May 25 18:51:36 EEST 2022
+create Table,cabinet,0,Wed May 25 18:51:36 EEST 2022
+insertion,Diagnostic,2,Wed May 25 18:52:16 EEST 2022
+create Table,cabinet,0,Wed May 25 18:52:17 EEST 2022
+insert,Cabinet,1,Wed May 25 18:52:17 EEST 2022
+insert,Cabinet,1,Wed May 25 18:52:17 EEST 2022
+insertion,Diagnostic,2,Wed May 25 18:54:55 EEST 2022
+create Table,cabinet,0,Wed May 25 18:54:55 EEST 2022
+getById,cabinet,0,Wed May 25 18:54:55 EEST 2022
+insertion,Diagnostic,2,Wed May 25 18:56:00 EEST 2022
+create Table,cabinet,0,Wed May 25 18:56:00 EEST 2022
+updateHasBed,cabinet,0,Wed May 25 18:56:00 EEST 2022
+getById,cabinet,0,Wed May 25 18:56:00 EEST 2022
+insertion,Diagnostic,2,Wed May 25 18:59:48 EEST 2022
+create Table,triaj,0,Wed May 25 18:59:48 EEST 2022
+insertion,Diagnostic,2,Wed May 25 19:01:46 EEST 2022
+create Table,triaj,0,Wed May 25 19:01:46 EEST 2022
+insert,triaj,1,Wed May 25 19:01:46 EEST 2022
+insert,triaj,1,Wed May 25 19:01:46 EEST 2022
+insert,triaj,1,Wed May 25 19:01:46 EEST 2022
+insertion,Diagnostic,2,Wed May 25 19:06:00 EEST 2022
+create Table,triaj,0,Wed May 25 19:06:00 EEST 2022
+insert,triaj,1,Wed May 25 19:06:00 EEST 2022
+insert,triaj,1,Wed May 25 19:06:00 EEST 2022
+insert,triaj,1,Wed May 25 19:06:00 EEST 2022
+getById,triaj,0,Wed May 25 19:06:00 EEST 2022
+insertion,Diagnostic,2,Wed May 25 19:06:23 EEST 2022
+create Table,triaj,0,Wed May 25 19:06:23 EEST 2022
+insertion,Diagnostic,2,Wed May 25 19:07:12 EEST 2022
+create Table,triaj,0,Wed May 25 19:07:12 EEST 2022
+updateSefTriaj,triaj,0,Wed May 25 19:07:12 EEST 2022
+insertion,Diagnostic,2,Wed May 25 19:07:20 EEST 2022
+create Table,triaj,0,Wed May 25 19:07:20 EEST 2022
+updateSefTriaj,triaj,0,Wed May 25 19:07:20 EEST 2022
+getById,triaj,0,Wed May 25 19:07:20 EEST 2022
+insertion,Diagnostic,2,Wed May 25 19:07:30 EEST 2022
+create Table,triaj,0,Wed May 25 19:07:31 EEST 2022
+updateSefTriaj,triaj,0,Wed May 25 19:07:31 EEST 2022
+getById,triaj,0,Wed May 25 19:07:31 EEST 2022
+insertion,Diagnostic,2,Wed May 25 19:07:53 EEST 2022
+create Table,triaj,0,Wed May 25 19:07:53 EEST 2022
+updateSefTriaj,triaj,0,Wed May 25 19:07:53 EEST 2022
+getById,triaj,0,Wed May 25 19:07:53 EEST 2022
+insertion,Diagnostic,2,Wed May 25 19:09:04 EEST 2022
+create Table,asigurare,0,Wed May 25 19:09:04 EEST 2022
+insert,asigurare,1,Wed May 25 19:09:04 EEST 2022
+insert,asigurare,1,Wed May 25 19:09:04 EEST 2022
+getById,asigurare,0,Wed May 25 19:09:04 EEST 2022
+getAll,asigurare,0,Wed May 25 19:09:04 EEST 2022
+updateTip,asigurare,0,Wed May 25 19:09:04 EEST 2022
+updateTip,asigurare,0,Wed May 25 19:09:04 EEST 2022
+updateDataExpirare,asigurare,0,Wed May 25 19:09:04 EEST 2022
+getById,asigurare,0,Wed May 25 19:09:04 EEST 2022
+create Table,diagnostic,0,Wed May 25 19:09:04 EEST 2022
+insert,diagnostic,1,Wed May 25 19:09:04 EEST 2022
+insert,diagnostic,1,Wed May 25 19:09:04 EEST 2022
+insertion,Diagnostic,2,Wed May 25 19:10:24 EEST 2022
+create Table,asigurare,0,Wed May 25 19:10:24 EEST 2022
+insert,asigurare,1,Wed May 25 19:10:24 EEST 2022
+insert,asigurare,1,Wed May 25 19:10:24 EEST 2022
+getById,asigurare,0,Wed May 25 19:10:24 EEST 2022
+getAll,asigurare,0,Wed May 25 19:10:24 EEST 2022
+updateTip,asigurare,0,Wed May 25 19:10:24 EEST 2022
+updateTip,asigurare,0,Wed May 25 19:10:24 EEST 2022
+updateDataExpirare,asigurare,0,Wed May 25 19:10:24 EEST 2022
+getById,asigurare,0,Wed May 25 19:10:24 EEST 2022
+create Table,diagnostic,0,Wed May 25 19:10:24 EEST 2022
+insert,diagnostic,1,Wed May 25 19:10:24 EEST 2022
+insert,diagnostic,1,Wed May 25 19:10:24 EEST 2022
+create Table,cabinet,0,Wed May 25 19:10:24 EEST 2022
+insert,cabinet,1,Wed May 25 19:10:24 EEST 2022
+insert,cabinet,1,Wed May 25 19:10:24 EEST 2022
+updateHasBed,cabinet,0,Wed May 25 19:10:24 EEST 2022
+getById,cabinet,0,Wed May 25 19:10:24 EEST 2022
+create Table,triaj,0,Wed May 25 19:10:24 EEST 2022
+insert,triaj,1,Wed May 25 19:10:24 EEST 2022
+insert,triaj,1,Wed May 25 19:10:24 EEST 2022
+insert,triaj,1,Wed May 25 19:10:24 EEST 2022
+updateSefTriaj,triaj,0,Wed May 25 19:10:24 EEST 2022
+getById,triaj,0,Wed May 25 19:10:24 EEST 2022
+insertion,Diagnostic,2,Wed May 25 19:11:05 EEST 2022
+create Table,asigurare,0,Wed May 25 19:11:06 EEST 2022
+insert,asigurare,1,Wed May 25 19:11:06 EEST 2022
+insert,asigurare,1,Wed May 25 19:11:06 EEST 2022
+getById,asigurare,0,Wed May 25 19:11:06 EEST 2022
+getAll,asigurare,0,Wed May 25 19:11:06 EEST 2022
+updateTip,asigurare,0,Wed May 25 19:11:06 EEST 2022
+updateTip,asigurare,0,Wed May 25 19:11:06 EEST 2022
+updateDataExpirare,asigurare,0,Wed May 25 19:11:06 EEST 2022
+getById,asigurare,0,Wed May 25 19:11:06 EEST 2022
+create Table,diagnostic,0,Wed May 25 19:11:06 EEST 2022
+insert,diagnostic,1,Wed May 25 19:11:06 EEST 2022
+insert,diagnostic,1,Wed May 25 19:11:06 EEST 2022
+create Table,cabinet,0,Wed May 25 19:11:06 EEST 2022
+insert,cabinet,1,Wed May 25 19:11:06 EEST 2022
+insert,cabinet,1,Wed May 25 19:11:06 EEST 2022
+updateHasBed,cabinet,0,Wed May 25 19:11:06 EEST 2022
+getById,cabinet,0,Wed May 25 19:11:06 EEST 2022
+create Table,triaj,0,Wed May 25 19:11:06 EEST 2022
+insert,triaj,1,Wed May 25 19:11:06 EEST 2022
+insert,triaj,1,Wed May 25 19:11:06 EEST 2022
+insert,triaj,1,Wed May 25 19:11:06 EEST 2022
+updateSefTriaj,triaj,0,Wed May 25 19:11:06 EEST 2022
+getById,triaj,0,Wed May 25 19:11:06 EEST 2022
+insertion,Diagnostic,2,Wed May 25 19:15:17 EEST 2022
+delete,asigurare,-1,Wed May 25 19:15:17 EEST 2022
+insertion,Diagnostic,2,Wed May 25 19:17:17 EEST 2022
+delete,diagnostic,-1,Wed May 25 19:17:17 EEST 2022
+delete,cabinet,-1,Wed May 25 19:17:17 EEST 2022
+delete,cabinet,-1,Wed May 25 19:17:17 EEST 2022
+insertion,Diagnostic,2,Wed May 25 19:17:24 EEST 2022
+delete,diagnostic,-1,Wed May 25 19:17:25 EEST 2022
+delete,cabinet,-1,Wed May 25 19:17:25 EEST 2022
+delete,triaj,-1,Wed May 25 19:17:25 EEST 2022
+insertion,Diagnostic,2,Wed May 25 19:20:32 EEST 2022
+create Table,asigurare,0,Wed May 25 19:20:32 EEST 2022
+insert,asigurare,1,Wed May 25 19:20:32 EEST 2022
+insert,asigurare,1,Wed May 25 19:20:32 EEST 2022
+getById,asigurare,0,Wed May 25 19:20:32 EEST 2022
+getAll,asigurare,0,Wed May 25 19:20:32 EEST 2022
+delete,asigurare,-1,Wed May 25 19:20:32 EEST 2022
+updateTip,asigurare,0,Wed May 25 19:20:32 EEST 2022
+updateTip,asigurare,0,Wed May 25 19:20:32 EEST 2022
+updateDataExpirare,asigurare,0,Wed May 25 19:20:32 EEST 2022
+getById,asigurare,0,Wed May 25 19:20:32 EEST 2022
+create Table,diagnostic,0,Wed May 25 19:20:32 EEST 2022
+insert,diagnostic,1,Wed May 25 19:20:32 EEST 2022
+insert,diagnostic,1,Wed May 25 19:20:32 EEST 2022
+delete,diagnostic,-1,Wed May 25 19:20:32 EEST 2022
+create Table,cabinet,0,Wed May 25 19:20:32 EEST 2022
+insert,cabinet,1,Wed May 25 19:20:32 EEST 2022
+insert,cabinet,1,Wed May 25 19:20:32 EEST 2022
+updateHasBed,cabinet,0,Wed May 25 19:20:32 EEST 2022
+getById,cabinet,0,Wed May 25 19:20:32 EEST 2022
+delete,cabinet,-1,Wed May 25 19:20:32 EEST 2022
+create Table,triaj,0,Wed May 25 19:20:32 EEST 2022
+insert,triaj,1,Wed May 25 19:20:32 EEST 2022
+insert,triaj,1,Wed May 25 19:20:32 EEST 2022
+insert,triaj,1,Wed May 25 19:20:32 EEST 2022
+updateSefTriaj,triaj,0,Wed May 25 19:20:32 EEST 2022
+getById,triaj,0,Wed May 25 19:20:32 EEST 2022
+delete,triaj,-1,Wed May 25 19:20:32 EEST 2022

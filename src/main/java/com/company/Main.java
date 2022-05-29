@@ -1,6 +1,10 @@
 package com.company;
 
 import com.company.entities.*;
+import com.company.repositories.AsigurareRepository;
+import com.company.repositories.CabinetRepository;
+import com.company.repositories.DiagnosticRepository;
+import com.company.repositories.TriajRepository;
 import com.company.services.*;
 
 
@@ -34,7 +38,7 @@ public class Main {
         Set<Doctor> doctori = new HashSet<Doctor>();
         doctori.add(doc1);
         doctori.add(doc2);
-        System.out.println(doctori);
+//        System.out.println(doctori);
 
         //adaugare programari pentru un pacient
         programari_pacient1[0] = new Programare(12,2, 5, doc1);
@@ -44,7 +48,7 @@ public class Main {
         //Adaugare pacienti
         Pacient pacient1 = new Pacient(1,"Ionut", new Diagnostic(1,"raceala"), programari_pacient1,new Asigurare(23,"stat","CASMB","10 10 23"));
 
-        System.out.println("Pacientul1 are asigurare de la " + pacient1.getAsigurare().getTipAsigurare());
+//        System.out.println("Pacientul1 are asigurare de la " + pacient1.getAsigurare().getTipAsigurare());
 
 
 
@@ -63,15 +67,15 @@ public class Main {
 
         //Apelam metode din servicii
 
-        System.out.println(pacientService.showPacientInfo(pacient1));
+//        System.out.println(pacientService.showPacientInfo(pacient1));
 
-        System.out.println(pacientService.showProgramari(pacient1));
+//        System.out.println(pacientService.showProgramari(pacient1));
 
-        System.out.println("Inainte de modificare din serviciu -> nume:" + doctorService.getNume(doc1));
+//        System.out.println("Inainte de modificare din serviciu -> nume:" + doctorService.getNume(doc1));
 
         doctorService.changeName(doc1,"Catalin");
 
-        System.out.println("Dupa modificarea din serviciu -> nume:" + doctorService.getNume(doc1));
+//        System.out.println("Dupa modificarea din serviciu -> nume:" + doctorService.getNume(doc1));
 
 
         //ETAPA 2
@@ -84,8 +88,8 @@ public class Main {
         List<Diagnostic> diagnostics2 = new ArrayList<Diagnostic>();
         diagnostics2.add(new Diagnostic(4,"asd"));
 
-        diagnosticService.writeDiagnostic(diagnostics2);
-        diagnosticService.readDiagnostic();
+        //diagnosticService.writeDiagnostic(diagnostics2);
+        //diagnosticService.readDiagnostic();
 
         List<Asigurare> asigurari = new ArrayList<Asigurare>();
         asigurari.add(new Asigurare(1, "stat","CASMB","20-oct-2023"));
@@ -93,8 +97,8 @@ public class Main {
         asigurari.add(new Asigurare(3, "privat","societate privata","23-july-2024"));
         asigurari.add(new Asigurare(4, "privat","societate privata","01-june-2022"));
 
-        asigurareService.writeAsigurari(asigurari);
-        asigurareService.readAsigurari();
+        //asigurareService.writeAsigurari(asigurari);
+        //asigurareService.readAsigurari();
 
         List<Cabinet> cabinete = new ArrayList<Cabinet>();
         cabinete.add(new Cabinet(1,true));
@@ -103,16 +107,59 @@ public class Main {
         cabinete.add(new Cabinet(4,true));
         cabinete.add(new Cabinet(5,false));
 
-        cabinetService.writeCabinete(cabinete);
-        cabinetService.readCabinete();
+        //cabinetService.writeCabinete(cabinete);
+        //cabinetService.readCabinete();
 
         List<Triaj> triaje = new ArrayList<Triaj>();
         triaje.add(new Triaj(1,"Popescu"));
         triaje.add(new Triaj(2,"Ionescu"));
         triaje.add(new Triaj(3,"Cornel"));
         triaje.add(new Triaj(4,"Ioana"));
-        triajService.writeTriaj(triaje);
-        triajService.readTriaj();
+        //triajService.writeTriaj(triaje);
+//        triajService.readTriaj();
+
+
+
+        // ETAPA 3
+
+        AsigurareRepository asigurareRepository = AsigurareRepository.getInstance();
+        DiagnosticRepository diagnosticRepository = DiagnosticRepository.getInstance();
+        CabinetRepository cabinetRepository = CabinetRepository.getInstance();
+        TriajRepository triajRepository = TriajRepository.getInstance();
+        asigurareRepository.createTable();
+        asigurareRepository.addAsigurare(asigurari.get(0));
+        asigurareRepository.addAsigurare(asigurari.get(1));
+        asigurareRepository.displayAsigurareById(2);
+        asigurareRepository.displayAsigurari();
+        asigurareRepository.deleteById(2);
+
+        asigurareRepository.updateAsigurareTip("privat",3);
+        asigurareRepository.updateAsigurareTip("Regina Maria",3);
+        asigurareRepository.updateAsigurareDataExpirare("23-march-2024", 3);
+        asigurareRepository.displayAsigurareById(3);
+
+
+        diagnosticRepository.createTable();
+        diagnosticRepository.addDiagnostic(diagnostics.get(0));
+        diagnosticRepository.addDiagnostic(diagnostics.get(1));
+        diagnosticRepository.deleteById(1);
+
+
+
+        cabinetRepository.createTable();
+        cabinetRepository.addCabinet(cabinete.get(0));
+        cabinetRepository.addCabinet(cabinete.get(1));
+        cabinetRepository.updateHasBed(false, 1);
+        cabinetRepository.displayCabinetById(1);
+        cabinetRepository.deleteById(1);
+
+        triajRepository.createTable();
+        triajRepository.addTriaj(triaje.get(0));
+        triajRepository.addTriaj(triaje.get(1));
+        triajRepository.addTriaj(triaje.get(2));
+        triajRepository.updateSefTriaj("Dominic Armand Stamatoiu", 1);
+        triajRepository.displayTriajById(1);
+        triajRepository.deleteById(1);
 
 
     }
